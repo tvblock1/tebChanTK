@@ -28,7 +28,11 @@
         <div class="row mt-3">
             <div class="col">
             {foreach $posts as $post}
-                <div class="row post" style="border: 1px solid black;">
+                <div class="row bg-light text-start">
+                    <div class="col-2">Post ID:{$post->id}</div>
+                    <div class="col-2"><a href="{$post->id}">[Odpowiedz]</a></div>
+                </div>
+                <div class="row post mb-5" style="border: 1px solid black;">
                     <div class="col-2 img">
                         <img src="{$post->image}" alt="Obrazek" class="img-fluid">
                     </div>

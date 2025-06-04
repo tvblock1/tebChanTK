@@ -20,6 +20,18 @@ Route::add('/', function() {
     $smarty->display('index.tpl');
 });
 
+Route::add('/([0-9]*)', function($id) {
+    $post = Post::get($id);
+    if ($post) {
+        global $smarty;
+        $smarty->assign('post', $post);
+        $smarty->display('post.tpl');
+    } else {
+        header('HTTP/1.0 404 Not Found');
+        echo 'Post not found';
+    }
+}, 'get');
+
 Route::add('/upload', function() {
     $imageUrl = Image::Upload($_FILES['file']);
     Post::add($imageUrl, $_POST['content'], $_POST['parent']);
