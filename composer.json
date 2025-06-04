@@ -1,0 +1,20 @@
+{
+    "name": "tvblock1/teb-chan",
+    "description": "Forum obrazkowe",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "tvblock1\\TebChan\\": "class/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tadeusz Krajewski",
+            "email": "tvblock1234@gmail.com"
+        }
+    ],
+    "require": {
+        "steampixel/simple-php-router": "^0.7.1",
+        "smarty/smarty": "^5.4"
+    }
+}
